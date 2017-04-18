@@ -528,3 +528,23 @@ SELECT name FROM dinos ORDER BY name LIMIT 1;
  Aardonyx
 
 8. Rename the five longest dinosaurs The Famous Five.
+SELECT length, id, name FROM dinos WHERE length > 0 ORDER BY length DESC, name ASC LIMIT 5;
+ length | id  |      name
+--------+-----+-----------------
+     40 |  61 | Seismosaurus
+     35 | 299 | Argentinosaurus
+     35 |  38 | Supersaurus
+     30 | 280 | Brachiosaurus
+     28 | 106 | Paralititan
+
+UPDATE dinos SET name = 'The Famous Five' WHERE length <= '40' AND length >= '28';
+UPDATE 5
+
+SELECT length, id, name FROM dinos WHERE length > 0 ORDER BY length DESC, name ASC LIMIT 5;
+ length | id  |      name
+--------+-----+-----------------
+     40 |  61 | The Famous Five
+     35 | 299 | The Famous Five
+     35 |  38 | The Famous Five
+     30 | 280 | The Famous Five
+     28 | 106 | The Famous Five
